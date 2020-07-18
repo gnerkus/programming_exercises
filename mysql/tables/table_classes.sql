@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS classes (
+  class_id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  max_hp_curve VARCHAR(255) NOT NULL,
+  max_attk_curve VARCHAR(255) NOT NULL,
+  max_defense_curve VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY(class_id)
+);
