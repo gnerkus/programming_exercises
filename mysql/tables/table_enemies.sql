@@ -21,5 +21,9 @@ DROP COLUMN hp;
 
 ALTER TABLE enemies MODIFY COLUMN scale ENUM('', 'F', 'E', 'D', 'C', 'B', 'A', 'S', 'X') NOT NULL;
 
-ALTER TABLE enemies ADD FOREIGN KEY(type_id) REFERENCES types(type_id);
-ALTER TABLE enemies ADD FOREIGN KEY(class_id) REFERENCES classes(class_id);
+ALTER TABLE enemies
+ADD COLUMN fk_type_id INT NOT NULL,
+ADD COLUMN fk_class_id INT NOT NULL;
+
+ALTER TABLE enemies ADD FOREIGN KEY(fk_type_id) REFERENCES types(type_id);
+ALTER TABLE enemies ADD FOREIGN KEY(fk_class_id) REFERENCES classes(class_id);
