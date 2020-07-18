@@ -27,3 +27,5 @@ ADD COLUMN fk_class_id INT NOT NULL;
 
 ALTER TABLE enemies ADD FOREIGN KEY(fk_type_id) REFERENCES types(type_id);
 ALTER TABLE enemies ADD FOREIGN KEY(fk_class_id) REFERENCES classes(class_id);
+
+ALTER TABLE enemies ADD CONSTRAINT uc_enemies_image UNIQUE (image);
