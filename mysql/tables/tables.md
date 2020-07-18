@@ -13,3 +13,8 @@ as how the traits (hp) grows with scale.
 
 ### Scripts
 - [table](table_classes.sql)
+
+## Types
+### Attributes
+### Scripts
+- [table](table_types.sql)
