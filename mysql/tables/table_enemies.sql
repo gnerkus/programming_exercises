@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS enemies (
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id)
+    PRIMARY KEY (enemy_id)
 );
 
 ALTER TABLE enemies
