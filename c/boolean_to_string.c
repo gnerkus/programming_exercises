@@ -6,8 +6,6 @@ Implement a function which convert the given boolean value into its string repre
 #include <assert.h>
 #include <string.h>
 
-#include <stdio.h>
-
 //The returned string should be statically allocated and it won't be freed
 const char *boolean_to_string(bool b)
 {
@@ -15,8 +13,8 @@ const char *boolean_to_string(bool b)
 }
 
 int main() {
-  //assert(strncmp(boolean_to_string(true), "true", 4) == 0);
-  //assert(strncmp(boolean_to_string(false), "false", 5) == 0);
+  assert(strncmp(boolean_to_string(true), "true", 4) == 0);
+  assert(strncmp(boolean_to_string(false), "false", 5) == 0);
 }
 
 /*
