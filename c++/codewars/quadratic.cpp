@@ -10,7 +10,9 @@ vector<int> quadratic(int a,int b){
   return coefficients;
 }
 
-// Best rated solution
+/*
+Best rated solution
 vector<int> quadratic_best(int a, int b) {
   return { 1, - (a + b), a * b };
 }
+*/
