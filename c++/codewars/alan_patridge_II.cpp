@@ -1,6 +1,6 @@
 /*
 Compile:
-g++ alan_patridge_II.cpp -o alan
+g++-10 alan_patridge_II.cpp -o alan
 */
 #include <string>
 #include <cassert>
