@@ -1,1 +1,51 @@
 .vscode
+
+## C++
+c++/**/.idea
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+## Cmake
+c++/**/CMakeLists.txt.user
+c++/**/CMakeCache.txt
+c++/**/CMakeFiles
+c++/**/CMakeScripts
+c++/**/Testing
+c++/**/Makefile
+c++/**/cmake_install.cmake
+c++/**/install_manifest.txt
+c++/**/compile_commands.json
+c++/**/CTestTestfile.cmake
+c++/**/_deps
+c++/**/cmake-build-debug
