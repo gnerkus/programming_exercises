@@ -67,6 +67,56 @@ testTimeout(6000, { signal });
 ac.abort();
 
 /**
+ * USE?
+ * 
+ * Timing out a long-running promise
+ * 
+ * First part is the implementation without 'timers/promise'
+ */
+
+const mockPromise = new Promise(function(resolve) {
+  setTimeout(() => {
+    resolve('Resolved in 1 second')
+  }, 1000);
+});
+
+function abortWithRace(mockPromise) {
+  console.log('...ABORT WITH RACE');
+  const timeoutPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('Promise was timed out because it took too long')
+    }, 500);
+  });
+  
+  Promise.race([mockPromise, timeoutPromise]).then((res) => {
+    console.log(res)
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+
+abortWithRace(mockPromise);
+
+/**
+ * Second part aborts the promise after a time period has elasped
+ */
+const abortController = new AbortController();
+setTimeout(() => abortController.abort(), 500);
+
+async function abortWithController(ac) {
+  console.log('...ABORT WITH CONTROLLER')
+  try {
+    await setTimeoutPromise(1000, 'Resolved in 1 second', { signal: ac.signal });
+  } catch (error) {
+    if (error.name === 'AbortError')
+        console.log('Promise was aborted after 500ms');
+  }
+}
+
+abortWithController(abortController);
+
+
+/**
  * EXAMPLE OUTPUT;
  * 
 [api] node timers.js                                  nodejs-api-study-01  ✱
