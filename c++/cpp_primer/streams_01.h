@@ -1,0 +1,12 @@
+//
+// Created by Ifeanyi Oraelosi on 23.01.22.
+//
+
+#ifndef PROGRAMMING_EXERCISES_C_CPP_PRIMER_STREAMS_01_H
+#define PROGRAMMING_EXERCISES_C_CPP_PRIMER_STREAMS_01_H
+
+class streams_01 {
+
+};
+
+#endif //PROGRAMMING_EXERCISES_C_CPP_PRIMER_STREAMS_01_H
