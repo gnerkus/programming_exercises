@@ -14,3 +14,15 @@ int main() {
 
 	return 0;
 }
+
+/*
+ * `endl` flushes the buffer. It's advisable to always do this
+ * when debugging.
+ *
+ * The `::` (scope) operator is used to access names in a namespace
+ *
+ *	It's recommended to use namespaces e.g std::cout
+ *
+ *
+ *
+ * */
