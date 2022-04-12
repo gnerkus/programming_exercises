@@ -1,10 +1,16 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.21)
 project(staging_clion)
 
+add_definitions("-std=c++20")
 set(CMAKE_CXX_STANDARD 20)
-
-add_executable(staging_clion main.cpp)
+set(CMAKE_VERBOSE_MAKEFILE 1)
 
 find_package (SQLite3)
 include_directories(${SQLite3_INCLUDE_DIRS})
-target_link_libraries(staging_clion ${SQLite3_LIBRARIES})
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+add_executable(staging_clion main.cpp src/practice/employee.cpp src/practice/employee.h)
+
+target_link_libraries(staging_clion ${SQLite3_LIBRARIES} ${CONAN_LIBS})

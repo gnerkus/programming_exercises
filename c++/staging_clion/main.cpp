@@ -1,7 +1,9 @@
 #include <iostream>
 #include <sqlite3.h>
+#include <pqxx/pqxx>
 
 int main() {
+  	// connect to postgres
     const int STATEMENTS = 8;
     sqlite3 *db;
     char *zErrMsg = nullptr;
